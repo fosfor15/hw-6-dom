@@ -35,7 +35,6 @@ console.log(list);
 console.log(newChoice);
 
 //установить стиль первому элементу
-
 const myStyle = document.getElementsByTagName('li')[0];
 myStyle.style.color = 'green';
 
