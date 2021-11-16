@@ -10,12 +10,13 @@ console.log(answer);
 
 //передать ответ в answer
 const myAnswer = document.getElementsByTagName('li')[1].textContent;
-answer.insertAdjacentHTML('beforeend', myAnswer);//вставляет в html
+answer.innerText = myAnswer;//вставляет в html
 
 
-// передаем ответ в константу и устанавливаем мдля элемента с классом answer атрибут с именем selected-option и значением порядковым номером выбранного варианта ответа.
+// передаем ответ в константу и устанавливаем для элемента с классом answer атрибут с именем selected-option и значением порядковым номером выбранного варианта ответа.
 answer.setAttribute('selected-option', 2);
-
+console.log('dataset  ' + answer.dataset.selectedOption);
+// Защищённые data атрибуты можно также установить через динамическое создание нового свойства у объекта dataset у объекта узла-элемента – точно в таком же стиле, как у обычных объектов
 
 //скрыть вариант ответа
 const hiddenChoice = document.getElementsByTagName('li')[4];
@@ -29,6 +30,12 @@ const list = document.getElementsByClassName('options')[0];
 const newChoice = `<li class ="self"> Все гуд! </li>`;
 
 list.insertAdjacentHTML('beforeend', newChoice);
+
 console.log(list);
 console.log(newChoice);
+
+//установить стиль первому элементу
+
+const myStyle = document.getElementsByTagName('li')[0];
+myStyle.style.color = 'green';
 
